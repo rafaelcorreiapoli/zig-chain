@@ -1,9 +1,6 @@
 import { describe, expect, it } from "bun:test";
-import { expect as ex } from "chai";
 
-import hre from "hardhat";
-import ZigChainModule from "../ignition/modules/ZigChain";
-import { PRODUCT_1 } from "./fixtures/PRODUCT_1";
+import { PRODUCT_1 } from "./fixtures/MOCKS";
 import { deployContracts } from "./fixtures/deployContracts";
 
 describe("Menu", () => {

@@ -1,6 +1,6 @@
 import hre from "hardhat";
 import { getAddress, parseEther } from "viem";
-import { PRODUCT_1 } from "./fixtures/PRODUCT_1";
+import { PRODUCT_1 } from "./fixtures/MOCKS";
 import { deployContracts } from "./fixtures/deployContracts";
 
 import { describe, expect, it } from "bun:test";

@@ -1,18 +1,7 @@
-import hre from "hardhat";
-import { formatEther, getAddress, parseEther } from "viem";
+import { deployContracts } from "../test/fixtures/deployContracts";
 
 async function main() {
-	// const initialStores = m.getParameter("initialStores", []);
-	const initialStores = [] as Array<{ name: string }>;
-
-	const stores = hre.viem.deployContract("Stores", [initialStores]);
-	const menu = hre.viem.deployContract("Menu");
-
-	const [_, deployedMenu] = await Promise.all([stores, menu]);
-
-	const productCheckout = await hre.viem.deployContract("ProductCheckout", [
-		getAddress(deployedMenu.address),
-	]);
+	await deployContracts();
 }
 
 // We recommend this pattern to be able to use async/await everywhere

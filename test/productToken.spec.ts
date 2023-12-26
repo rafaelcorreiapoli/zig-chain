@@ -1,7 +1,7 @@
 import { describe, expect, it } from "bun:test";
 import hre from "hardhat";
 import { getAddress } from "viem";
-import { PRODUCT_1 } from "./fixtures/PRODUCT_1";
+import { PRODUCT_1 } from "./fixtures/MOCKS";
 import { deployContracts } from "./fixtures/deployContracts";
 
 describe("ProductToken", () => {

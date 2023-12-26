@@ -1,26 +1,6 @@
 import { describe, expect, it } from "bun:test";
-import hre from "hardhat";
-import ZigChainModule from "../ignition/modules/ZigChain";
+import { STORE_1, STORE_2 } from "./fixtures/MOCKS";
 import { deployContracts } from "./fixtures/deployContracts";
-
-const STORE_1 = {
-	id: 1,
-	name: "Próximo",
-	logoUrl: "https://placehold.it/300x300",
-	location: {
-		lat: BigInt(10),
-		long: BigInt(20),
-	},
-};
-const STORE_2 = {
-	id: 2,
-	name: "Porão",
-	logoUrl: "https://placehold.it/300x300",
-	location: {
-		lat: BigInt(10),
-		long: BigInt(20),
-	},
-};
 
 describe("Stores", () => {
 	describe("Create Store", () => {

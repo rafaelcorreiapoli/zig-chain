@@ -1,29 +1,29 @@
 {
-  "name": "hardhat-project",
-  "scripts": {
-    "test": "bun test",
-    "test:watch": "bun --watch test",
-    "deploy:testnet": "hardhat run scripts/deploy.ts --network sepolia",
-    "deploy:ignition:testnet": "hardhat ignition deploy ignition/modules/ZigChain.ts --network sepolia",
-    "deploy:ignition:localhost": "hardhat ignition deploy ignition/modules/ZigChain.ts --network localhost",
-    "verify:testnet": "hardhat verify --network sepolia",
-    "node": "hardhat node"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^1.4.1",
-    "@nomicfoundation/hardhat-chai-matchers": "^2.0.3",
-    "@nomicfoundation/hardhat-ignition-ethers": "^0.13.1",
-    "@nomicfoundation/hardhat-ignition-viem": "^0.13.1",
-    "@nomicfoundation/hardhat-network-helpers": "^1.0.10",
-    "@nomicfoundation/hardhat-toolbox-viem": "^2.0.0",
-    "@nomicfoundation/hardhat-verify": "^2.0.3",
-    "@nomicfoundation/hardhat-viem": "^1.0.2",
-    "@openzeppelin/contracts": "^5.0.1",
-    "@openzeppelin/hardhat-upgrades": "^3.0.1",
-    "@types/bun": "^1.0.0",
-    "@types/lodash.merge": "^4.6.9",
-    "hardhat": "^2.19.3",
-    "lodash.merge": "^4.6.2",
-    "viem": "^1.21.0"
-  }
+	"name": "hardhat-project",
+	"scripts": {
+		"test": "bun test",
+		"test:watch": "bun --watch test",
+		"deploy:testnet": "hardhat run scripts/deploy.ts --network sepolia",
+		"deploy:local": "hardhat run scripts/deploy.ts --network localhost",
+		"verify:testnet": "hardhat verify --network sepolia",
+		"node": "hardhat node",
+		"compile": "hardhat compile"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.4.1",
+		"@nomicfoundation/hardhat-chai-matchers": "^2.0.3",
+		"@nomicfoundation/hardhat-ignition-ethers": "^0.13.1",
+		"@nomicfoundation/hardhat-ignition-viem": "^0.13.1",
+		"@nomicfoundation/hardhat-network-helpers": "^1.0.10",
+		"@nomicfoundation/hardhat-toolbox-viem": "^2.0.0",
+		"@nomicfoundation/hardhat-verify": "^2.0.3",
+		"@nomicfoundation/hardhat-viem": "^1.0.2",
+		"@openzeppelin/contracts": "^5.0.1",
+		"@openzeppelin/hardhat-upgrades": "^3.0.1",
+		"@types/bun": "^1.0.0",
+		"@types/lodash.merge": "^4.6.9",
+		"hardhat": "^2.19.3",
+		"lodash.merge": "^4.6.2",
+		"viem": "^1.21.0"
+	}
 }
