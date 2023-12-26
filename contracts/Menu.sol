@@ -51,18 +51,6 @@ contract Menu {
         return productsByStore;
     }
 
-    // function x(
-    //     uint256 _storeId,
-    //     uint256 _productId
-    // ) private view returns (SharedStructs.Product memory product) {
-    //     for (uint i = 0; i < productsByStore[_storeId].length; i++) {
-    //         if (productsByStore[_storeId][i].id == _productId) {
-    //             return productsByStore[_storeId][i];
-    //         }
-    //     }
-    //     revert("Not found");
-    // }
-
     function getProductById(
         uint256 _productId
     ) public view returns (SharedStructs.Product memory product) {
