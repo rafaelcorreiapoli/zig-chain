@@ -25,12 +25,18 @@ export const deployContracts = async (
 
 	const storesDeploy = hre.viem.deployContract("Stores", [initialStores]);
 	const menuDeploy = hre.viem.deployContract("Menu");
+	const productTokenDeploy = hre.viem.deployContract("ProductToken");
 
-	const [stores, menu] = await Promise.all([storesDeploy, menuDeploy]);
+	const [stores, menu, productToken] = await Promise.all([
+		storesDeploy,
+		menuDeploy,
+		productTokenDeploy,
+	]);
 
 	const productCheckout = await hre.viem.deployContract("ProductCheckout", [
 		menu.address,
+		productToken.address,
 	]);
 
-	return { stores, menu, productCheckout };
+	return { stores, menu, productCheckout, productToken };
 };
